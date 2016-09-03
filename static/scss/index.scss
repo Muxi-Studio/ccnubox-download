@@ -123,19 +123,19 @@ a{
 				background-color:$footer-color;
 				text-align: center;
 				width: 100%;
-			p,a{
+		p,a{
 				display: inline-block;
 				height: 1.6em;
 				line-height: 1.6em;
 				color: #fff;
-				}
-				a{
-					cursor: pointer;
-					margin:0 1.3em;
-				}
-				a:hover{
-					color: $background-color;
-				}
+			}
+		a{
+				cursor: pointer;
+				margin:0 1.3em;
+		}
+		a:hover{
+				color: $background-color;
+		}
 
 	}
 	.erwei{
