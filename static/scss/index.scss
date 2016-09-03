@@ -20,6 +20,7 @@ a{
 		max-width:950px;
 		margin:0 auto;
 		padding-top: 173px;
+		min-height: 100%;
 		.left{
 			width: 400px;
 			display: inline-block;
@@ -33,6 +34,7 @@ a{
 			.title{
 				margin-top: -16px;
 				margin-left: 25px;
+				width:275px;
 			}
 			p{
 				font-family: "MFBanHei";
@@ -69,7 +71,10 @@ a{
 				background-color:#c9c9c9;
 				color: #fff;
 				border-bottom: 4px solid #616161;
-				cursor:not-allowed
+				cursor: not-allowed;
+			}
+			.btn-m{
+				display: none;
 			}
 		}
 		.right{
@@ -109,28 +114,60 @@ a{
 
 			}
 		}
+		
 	}
 	footer{
-			position: absolute;
-			bottom: 0;
-			background-color:$footer-color;
-			text-align: center;
-			width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color:$footer-color;
+				text-align: center;
+				width: 100%;
 			p,a{
 				display: inline-block;
 				height: 1.6em;
 				line-height: 1.6em;
 				color: #fff;
-			}
-			a{
-				cursor: pointer;
-				margin:0 1.3em;
-			}
-			a:hover{
-				color: $background-color;
-			}
+				}
+				a{
+					cursor: pointer;
+					margin:0 1.3em;
+				}
+				a:hover{
+					color: $background-color;
+				}
 
 	}
+	.erwei{
+		display: none;
+		width: 170px;
+	    height: 170px;
+	    background-color: #fff;
+	    padding: 40px;
+	    border-radius: 5px;
+	    position: fixed ;
+	    text-align: center;
+	    top: 175px;
+	    left: 50%;
+    	transform: translateX(-50%);
+    	-moz-transform: translateX(-50%);
+    	z-index: 4;
+		.close{
+			color: #ec6941;
+			position: absolute;
+			font-size: 25px;
+			top: 5px;
+			right: 15px;
+			cursor: pointer;
+		}
+		img{
+			width: 100%;
+		}
+		p{
+			margin-top: 5px;
+		}
+	}
+	
 }
 
 @media screen and (max-width: 63em){
@@ -141,7 +178,9 @@ a{
 		max-width: 45rem;
 		margin: 0 auto;
 		text-align: center;
-		padding-top: 60px;
+		padding-top: 40px;
+		min-height: 100%;
+		position: relative;
 		.main-top{
 			img{
 				display:block;
@@ -163,8 +202,9 @@ a{
 				}
 				.title{
 					margin-top: -20px;
+					width: 80%;
 				}
-				.content-c,.btn-ios{
+				.content-c{
 					display: none;
 				}
 				.content-m{
@@ -172,27 +212,40 @@ a{
 					color: #fff;
 					font-size: 15px;
 					letter-spacing: 2px;
+					margin: 4% auto;
 				}
-				.btn-android{
-					width: 8.2em;
-				    line-height: 2.5em;
+				.btn{
+					width: 60%;
+				    line-height: 50px;
 				    text-align: center;
-				    height: 2.5em;
+				    height: 50px;
 				    font-size: 22px;
 				    text-decoration: none;
 				    letter-spacing: .07em;
 				    border-radius: 5px;
-				    display: inline-block;
+				    display: block;
+				}
+				.btn-ios{
+					background-color:#c9c9c9;
+					color: #fff;
+					border-bottom: 4px solid #616161;
+					cursor: not-allowed;
+					margin: 0 auto;
+				}
+				.btn-android{
 				    cursor: pointer;
 				    background-color:$button-color;
 				    color: #fff;
 				    border-bottom: 4px solid #ff6d33;
-					margin-top: 10px;
+					margin: 5% auto;
 				    &:active,&:hover{
 				    	position: relative;
 				    	top: 1px;
 				    	border-bottom: 0;
 				    }
+				}
+				.btn-c{
+					display: none;
 				}
 			}
 			.right{
@@ -219,6 +272,7 @@ a{
 	footer{
 		position: absolute;
 		bottom: 0;
+		left: 0;
 		background-color:$footer-color;
 		text-align: center;
 		width: 100%;
@@ -236,4 +290,15 @@ a{
 			color: $background-color;
 		}
 	}
+	.erwei{
+		display: none;
+	}
+}
+
+#mask{
+	position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
