@@ -31,17 +31,13 @@ a{
 			.content-m,.light{
 				display: none;
 			}
+			.content-c{
+				margin: 20px 0;
+			}
 			.title{
 				margin-top: -16px;
 				margin-left: 25px;
 				width:275px;
-			}
-			p{
-				font-family: "MFBanHei";
-				letter-spacing: 4px;
-				font-size: 18px;
-				color: #fff;
-				margin-bottom:30px;
 			}
 			.btn{
 				width: 8.2em;
@@ -208,11 +204,8 @@ a{
 					display: none;
 				}
 				.content-m{
-					font-family: "MFBanHei";
-					color: #fff;
-					font-size: 15px;
-					letter-spacing: 2px;
-					margin: 4% auto;
+					width: 90%;
+					margin: 10% auto;
 				}
 				.btn{
 					width: 60%;
